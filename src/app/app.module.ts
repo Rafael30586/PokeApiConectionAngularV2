@@ -9,6 +9,8 @@ import { BaseStatsComponent } from './base-stats/base-stats.component';
 import { ImagesComponent } from './images/images.component';
 import {HttpClientModule} from '@angular/common/http' 
 import { ReactiveFormsModule } from '@angular/forms';
+import { SecondTypePipe } from './pipes/second-type.pipe';
+import { RemoveMiddleDashPipe } from './pipes/remove-middle-dash.pipe';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     GeneralComponent,
     BaseStatsComponent,
-    ImagesComponent
+    ImagesComponent,
+    SecondTypePipe,
+    RemoveMiddleDashPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,9 @@
 <div class="general-container">
     <section class="general">
-        <span class="general-data-label">Id: <span class="general-data">471</span></span>
-        <span class="general-data-label">Name: <span class="general-data">Glaceon</span></span>
-        <span class="general-data-label">Height: <span class="general-data">8</span></span>
-        <span class="general-data-label">Weight: <span class="general-data">259</span></span>
-        <span class="general-data-label">Type: <span class="general-data">Ice</span></span>
+        <span class="general-data-label">Id: <span class="general-data">{{ (pokemonData$ | async)?.id }}</span></span>
+        <span class="general-data-label">Name: <span class="general-data">{{ (pokemonData$ | async)?.name}}</span></span>
+        <span class="general-data-label">Height: <span class="general-data">{{ (pokemonData$ | async)?.height}}</span></span>
+        <span class="general-data-label">Weight: <span class="general-data">{{(pokemonData$ | async)?.weight}}</span></span>
+        <span class="general-data-label">Type: <span class="general-data">{{(pokemonData$ | async)?.types?.[0]?.type?.name }} {{(pokemonData$ | async)?.types?.[1]?.type?.name | secondType}}</span></span>
     </section>
 </div>

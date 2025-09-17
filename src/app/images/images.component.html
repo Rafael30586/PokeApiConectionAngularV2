@@ -1,7 +1,9 @@
 <div class="image-container">
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png" alt="pokemon image"
+    <ng-container *ngIf="pokemonData$ | async as pokemon">
+        <img [src]="frontPicture ? pokemon.sprites.front_default : pokemon.sprites.back_default" alt="pokemon image"
         class="pokemon-image" id="pokemon-image">
-    <button class="change-image-button" id="change-image-button">
+    </ng-container>
+    <button class="change-image-button" id="change-image-button" (click)="changeImage()">
         <img src="../../assets/arrow-left-right.svg" alt="" class="change-image-button-image">
     </button>
 </div>

@@ -9,6 +9,10 @@ export interface IPokemon{
 }
 
 export interface IType{
+    type: ITypeB
+}
+
+export interface ITypeB{
     name: string
 }
 

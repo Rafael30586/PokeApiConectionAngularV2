@@ -1,10 +1,22 @@
 <div class="base-stats-container">
     <section class="base-stats">
-        <span class="stat-name">HP: <span class="stat-value">65</span></span>
-        <span class="stat-name">Attack: <span class="stat-value">60</span></span>
-        <span class="stat-name">Defense: <span class="stat-value">110</span></span>
-        <span class="stat-name">Special attack: <span class="stat-value">130</span></span>
-        <span class="stat-name">Special defense: <span class="stat-value">95</span></span>
-        <span class="stat-name">Speed: <span class="stat-value">65</span></span>
+        <span class="stat-name">{{(pokemonData$ | async)?.stats?.[0]?.stat?.name | removeMiddleDash | titlecase}}:
+            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[0]?.base_stat}}</span>
+        </span>
+        <span class="stat-name">{{(pokemonData$ | async)?.stats?.[1]?.stat?.name | removeMiddleDash| titlecase}}:
+           <span class="stat-value">{{(pokemonData$ | async )?.stats?.[1]?.base_stat}}</span>
+        </span>
+        <span class="stat-name">{{(pokemonData$ | async)?.stats?.[2]?.stat?.name | removeMiddleDash| titlecase}}:
+            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[2]?.base_stat}}</span>
+        </span>
+        <span class="stat-name">{{(pokemonData$ | async)?.stats?.[3]?.stat?.name | removeMiddleDash| titlecase}}:
+            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[3]?.base_stat}}</span>
+        </span>
+        <span class="stat-name">{{(pokemonData$ | async)?.stats?.[4]?.stat?.name | removeMiddleDash| titlecase}}:
+            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[4]?.base_stat}}</span>
+        </span>
+        <span class="stat-name">{{(pokemonData$ | async)?.stats?.[5]?.stat?.name | removeMiddleDash| titlecase}}: 
+            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[4]?.base_stat}}</span>
+        </span>
     </section>
 </div>

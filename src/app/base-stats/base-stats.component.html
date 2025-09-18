@@ -1,3 +1,4 @@
+<h1 class="title-section" appTitleSection [darkTheme]="darkTheme">Base stats</h1>
 <div class="base-stats-container" appBodyTheme [darkTheme]="darkTheme">
     <section class="base-stats" appSectionTheme [darkTheme]="darkTheme">
         <span class="stat-name">{{(pokemonData$ | async)?.stats?.[0]?.stat?.name | removeMiddleDash | titlecase}}:

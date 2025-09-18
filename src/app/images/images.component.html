@@ -1,3 +1,4 @@
+<h1 class="title-section" appTitleSection [darkTheme]="darkTheme">Images</h1>
 <div class="image-container" appBodyTheme [darkTheme]="darkTheme">
     <ng-container *ngIf="pokemonData$ | async as pokemon">
         <img [src]="frontPicture ? pokemon.sprites.front_default : pokemon.sprites.back_default" alt="pokemon image"

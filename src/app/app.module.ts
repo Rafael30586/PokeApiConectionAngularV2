@@ -19,6 +19,8 @@ import { InputThemeDirective } from './directives/input-theme.directive';
 import { ThemeButtonThemeDirective } from './directives/theme-button-theme.directive';
 import { SectionThemeDirective } from './directives/section-theme.directive';
 import { DataThemeDirective } from './directives/data-theme.directive';
+import { HowToComponent } from './how-to/how-to.component';
+import { TitleSectionDirective } from './directives/title-section.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { DataThemeDirective } from './directives/data-theme.directive';
     InputThemeDirective,
     ThemeButtonThemeDirective,
     SectionThemeDirective,
-    DataThemeDirective
+    DataThemeDirective,
+    HowToComponent,
+    TitleSectionDirective
   ],
   imports: [
     BrowserModule,

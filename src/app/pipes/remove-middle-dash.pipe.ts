@@ -9,6 +9,7 @@ export class RemoveMiddleDashPipe implements PipeTransform {
 
   transform(value: string | undefined): string | undefined{
     if(value !== undefined) this.withoutMiddleDash = value.replace("-"," ")
+    else return ' '
     return this.withoutMiddleDash
   }
 

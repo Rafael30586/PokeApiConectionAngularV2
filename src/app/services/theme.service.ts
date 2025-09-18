@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
 
-  currentTheme: number 
+  private darkTheme$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false)
 
   constructor() { 
-    this.currentTheme = 0
+    
   }
 
-  changeTheme(){
-    if(this.currentTheme === 0) this.currentTheme = 1
-    else this.currentTheme = 0
+  
+
+  public getDarkTheme(){
+    return this.darkTheme$.asObservable()
+  }
+
+  public setDarkTheme(darkTheme: boolean){
+    this.darkTheme$.next(darkTheme)
   }
 }

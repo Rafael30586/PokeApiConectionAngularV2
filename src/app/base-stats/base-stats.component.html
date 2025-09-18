@@ -1,22 +1,22 @@
-<div class="base-stats-container">
-    <section class="base-stats">
+<div class="base-stats-container" appBodyTheme [darkTheme]="darkTheme">
+    <section class="base-stats" appSectionTheme [darkTheme]="darkTheme">
         <span class="stat-name">{{(pokemonData$ | async)?.stats?.[0]?.stat?.name | removeMiddleDash | titlecase}}:
-            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[0]?.base_stat}}</span>
+            <span class="stat-value" appDataTheme [darkTheme]="darkTheme">{{(pokemonData$ | async )?.stats?.[0]?.base_stat}}</span>
         </span>
         <span class="stat-name">{{(pokemonData$ | async)?.stats?.[1]?.stat?.name | removeMiddleDash| titlecase}}:
-           <span class="stat-value">{{(pokemonData$ | async )?.stats?.[1]?.base_stat}}</span>
+           <span class="stat-value" appDataTheme [darkTheme]="darkTheme">{{(pokemonData$ | async )?.stats?.[1]?.base_stat}}</span>
         </span>
         <span class="stat-name">{{(pokemonData$ | async)?.stats?.[2]?.stat?.name | removeMiddleDash| titlecase}}:
-            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[2]?.base_stat}}</span>
+            <span class="stat-value" appDataTheme [darkTheme]="darkTheme">{{(pokemonData$ | async )?.stats?.[2]?.base_stat}}</span>
         </span>
         <span class="stat-name">{{(pokemonData$ | async)?.stats?.[3]?.stat?.name | removeMiddleDash| titlecase}}:
-            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[3]?.base_stat}}</span>
+            <span class="stat-value" appDataTheme [darkTheme]="darkTheme">{{(pokemonData$ | async )?.stats?.[3]?.base_stat}}</span>
         </span>
         <span class="stat-name">{{(pokemonData$ | async)?.stats?.[4]?.stat?.name | removeMiddleDash| titlecase}}:
-            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[4]?.base_stat}}</span>
+            <span class="stat-value" appDataTheme [darkTheme]="darkTheme">{{(pokemonData$ | async )?.stats?.[4]?.base_stat}}</span>
         </span>
         <span class="stat-name">{{(pokemonData$ | async)?.stats?.[5]?.stat?.name | removeMiddleDash| titlecase}}: 
-            <span class="stat-value">{{(pokemonData$ | async )?.stats?.[4]?.base_stat}}</span>
+            <span class="stat-value" appDataTheme [darkTheme]="darkTheme">{{(pokemonData$ | async )?.stats?.[4]?.base_stat}}</span>
         </span>
     </section>
 </div>

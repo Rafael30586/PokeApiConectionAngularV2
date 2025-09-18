@@ -1,9 +1,9 @@
-<div class="general-container">
-    <section class="general">
-        <span class="general-data-label">Id: <span class="general-data">{{ (pokemonData$ | async)?.id }}</span></span>
-        <span class="general-data-label">Name: <span class="general-data">{{ (pokemonData$ | async)?.name}}</span></span>
-        <span class="general-data-label">Height: <span class="general-data">{{ (pokemonData$ | async)?.height}}</span></span>
-        <span class="general-data-label">Weight: <span class="general-data">{{(pokemonData$ | async)?.weight}}</span></span>
-        <span class="general-data-label">Type: <span class="general-data">{{(pokemonData$ | async)?.types?.[0]?.type?.name }} {{(pokemonData$ | async)?.types?.[1]?.type?.name | secondType}}</span></span>
+<div class="general-container" appBodyTheme [darkTheme]="darkTheme">
+    <section class="general" appSectionTheme [darkTheme]="darkTheme">
+        <span class="general-data-label">Id: <span class="general-data" appDataTheme [darkTheme]="darkTheme">{{ (pokemonData$ | async)?.id }}</span></span>
+        <span class="general-data-label">Name: <span class="general-data" appDataTheme [darkTheme]="darkTheme">{{ (pokemonData$ | async)?.name}}</span></span>
+        <span class="general-data-label">Height: <span class="general-data" appDataTheme [darkTheme]="darkTheme">{{ (pokemonData$ | async)?.height}}</span></span>
+        <span class="general-data-label">Weight: <span class="general-data" appDataTheme [darkTheme]="darkTheme">{{(pokemonData$ | async)?.weight}}</span></span>
+        <span class="general-data-label">Type: <span class="general-data" appDataTheme [darkTheme]="darkTheme">{{(pokemonData$ | async)?.types?.[0]?.type?.name }} {{(pokemonData$ | async)?.types?.[1]?.type?.name | secondType}}</span></span>
     </section>
 </div>

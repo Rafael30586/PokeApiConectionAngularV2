@@ -12,6 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SecondTypePipe } from './pipes/second-type.pipe';
 import { RemoveMiddleDashPipe } from './pipes/remove-middle-dash.pipe';
 
+import { BodyThemeDirective } from './directives/body-theme.directive';
+import { HeaderThemeDirective } from './directives/header-theme.directive';
+import { SubmitButtonThemeDirective } from './directives/submit-button-theme.directive';
+import { InputThemeDirective } from './directives/input-theme.directive';
+import { ThemeButtonThemeDirective } from './directives/theme-button-theme.directive';
+import { SectionThemeDirective } from './directives/section-theme.directive';
+import { DataThemeDirective } from './directives/data-theme.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +28,14 @@ import { RemoveMiddleDashPipe } from './pipes/remove-middle-dash.pipe';
     BaseStatsComponent,
     ImagesComponent,
     SecondTypePipe,
-    RemoveMiddleDashPipe
+    RemoveMiddleDashPipe,
+    BodyThemeDirective,
+    HeaderThemeDirective,
+    SubmitButtonThemeDirective,
+    InputThemeDirective,
+    ThemeButtonThemeDirective,
+    SectionThemeDirective,
+    DataThemeDirective
   ],
   imports: [
     BrowserModule,

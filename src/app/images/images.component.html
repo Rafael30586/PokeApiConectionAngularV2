@@ -1,7 +1,7 @@
-<div class="image-container">
+<div class="image-container" appBodyTheme [darkTheme]="darkTheme">
     <ng-container *ngIf="pokemonData$ | async as pokemon">
         <img [src]="frontPicture ? pokemon.sprites.front_default : pokemon.sprites.back_default" alt="pokemon image"
-        class="pokemon-image" id="pokemon-image">
+        class="pokemon-image" id="pokemon-image" appSectionTheme [darkTheme]="darkTheme">
     </ng-container>
     <button class="change-image-button" id="change-image-button" (click)="changeImage()">
         <img src="../../assets/arrow-left-right.svg" alt="" class="change-image-button-image">

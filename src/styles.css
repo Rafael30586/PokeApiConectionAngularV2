@@ -46,9 +46,13 @@
 
 :root{
     --color-header: #CF2402;
+    --color-header-2: #64EDED;
     --color-2: #8C1A00;
+    --color-2-2: #BAFFFF;
     --theme-button-color: #09BD79;
+    --Theme-button-color-2: #EDE43B;
     --change-image-button-container: #168CD9;
+    --dark-body: #303030;
 }
 
 .body{
@@ -84,11 +88,13 @@
 
 a:link{
     text-decoration: none;
-    color: white;
+    /*color: white;*/
+    color: inherit;
 }
 
 a:visited{
-    color: white;
+    /*color: white;*/
+    color: inherit;
 }
 
 .nav-form{
@@ -237,4 +243,45 @@ a:visited{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     color: var(--color-header);
+}
+
+/* THEMES*/
+
+.dark-body{
+    background-color: var(--dark-body);
+}
+
+.dark-header{
+    background-color: var(--color-header-2);
+    color: var(--dark-body);
+}
+
+.dark-input{
+    background-color: var(--color-2-2);
+    color: var(--dark-body);
+}
+
+.dark-input:focus{
+    outline: none;
+    border-bottom: 2px solid var(--dark-body);
+    background-color: var(--color-header-2);
+}
+
+.dark-submit-button{
+    background-color: var(--dark-body);
+    color: var(--color-header-2);
+}
+
+.dark-theme-button{
+    background-color: var(--Theme-button-color-2);
+}
+
+.dark-section{
+    color: white;
+    border-bottom-color: var(--color-header-2);
+    border-right-color: var(--color-header-2);
+}
+
+.dark-data{
+    color: var(--color-header-2);
 }

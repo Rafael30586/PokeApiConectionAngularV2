@@ -9,45 +9,67 @@ import { IPokemon } from '../models/IPokemon.model';
 export class PokeApiService {
 
   private baseUrl: string = 'https://pokeapi.co/api/v2/pokemon'
-  private currentPokemon: string
   private currentPokemonData$: BehaviorSubject<IPokemon> = new BehaviorSubject<IPokemon>({
-    id: 0,
-    name: ' ',
-    height: 0,
-    weight: 0,
+    id: 81,
+    name: 'magnemite',
+    height: 3,
+    weight: 60,
     types: [
-      
+      {type: { name: 'electric'}},
+      {type: {name: 'steel'}}
     ],
     sprites: {
-      front_default: ' ',
-      back_default: ' '
+      front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png',
+      back_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/81.png'
     },
     stats: [
       {
-        base_stat: 0,
+        base_stat: 25,
         stat: {
-          name: ' '
+          name: 'hp'
+        }
+      },
+      {
+        base_stat: 35,
+        stat: {
+          name: 'attack'
+        }
+      },
+      {
+        base_stat: 70,
+        stat: {
+          name: 'defense'
+        }
+      },
+      {
+        base_stat: 95,
+        stat: {
+          name: 'special-attack'
+        }
+      },
+      {
+        base_stat: 55,
+        stat: {
+          name: 'special-defense'
+        }
+      },
+      {
+        base_stat: 45,
+        stat: {
+          name: 'speed'
         }
       }
     ]
 
   })
-  private typesQuantity$: BehaviorSubject<number> = new BehaviorSubject<number>(1)
+  
 
   constructor(private httpClient: HttpClient) {
-    this.currentPokemon = String(Math.floor(Math.random() * 1000) + 1)
+
    }
 
   public getPokemon(nameOrId: string): Observable<IPokemon>{
     return this.httpClient.get<IPokemon>(`${this.baseUrl}/${nameOrId}`)
-  }
-
-  public setCurrentPokemon(idOrName: string){
-    this.currentPokemon = idOrName
-  }
-
-  public getCurrentPokemon(){
-    return this.currentPokemon
   }
 
   public getCurrentPokemonData(){
@@ -58,12 +80,5 @@ export class PokeApiService {
     this.currentPokemonData$.next(pokemonData)
   }
 
-  public getTypesQuantity(){
-    return this.typesQuantity$.asObservable()
-  }
-
-  public setTypesQuantity(typesQuantity: number){
-    this.typesQuantity$.next(typesQuantity)
-  }
 
 }

@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" appHeaderTheme [darkTheme]="darkTheme">
     <nav class="nav">
         <div class="nav-options">
             <span class="nav-option"><a href="" [routerLink]="['general']">General</a></span>
@@ -6,9 +6,9 @@
             <span class="nav-option"><a href="" [routerLink]="['base-stats']">Base stats</a></span>
         </div>
         <form action="" class="nav-form" [formGroup]="formGroup" (ngSubmit)="onSubmit($event)">
-            <input type="text" class="nav-form-input" formControlName="idOrName">
-            <button type="submit" class="submit-button">Search</button>
-            <button class="theme-button"></button>
+            <input type="text" class="nav-form-input" formControlName="idOrName" appInputTheme [darkTheme]="darkTheme">
+            <button type="submit" class="submit-button" appSubmitButtonTheme [darkTheme]="darkTheme">Search</button>
+            <button class="theme-button" (click)="changeTheme()" appThemeButtonTheme [darkTheme]="darkTheme"></button>
         </form>
     </nav>
 </header>

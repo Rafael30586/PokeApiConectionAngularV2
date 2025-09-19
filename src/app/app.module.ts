@@ -21,6 +21,8 @@ import { SectionThemeDirective } from './directives/section-theme.directive';
 import { DataThemeDirective } from './directives/data-theme.directive';
 import { HowToComponent } from './how-to/how-to.component';
 import { TitleSectionDirective } from './directives/title-section.directive';
+import { PokemonNameDirective } from './directives/pokemon-name.directive';
+import { SubtitleDirective } from './directives/subtitle.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { TitleSectionDirective } from './directives/title-section.directive';
     SectionThemeDirective,
     DataThemeDirective,
     HowToComponent,
-    TitleSectionDirective
+    TitleSectionDirective,
+    PokemonNameDirective,
+    SubtitleDirective
   ],
   imports: [
     BrowserModule,

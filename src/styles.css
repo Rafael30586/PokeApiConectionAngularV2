@@ -76,6 +76,14 @@
     gap:200px;
 }
 
+@media screen and (max-width: 880px) {
+    .nav{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
 .nav-options{
     display: flex;
     gap: 20px;
@@ -160,6 +168,13 @@ a:visited{
     padding-top: 40px;
 }
 
+@media screen and (max-width: 700px) {
+    .title-section{
+        font-size: 1.5rem;
+    }
+}
+
+
 /*HOW TO*/
 
 .how-to-container{
@@ -179,6 +194,29 @@ a:visited{
     font-size: 1.5rem;
     font-weight: 500;
 }
+
+@media screen and (max-width: 500px) {
+    .how-to{
+        width: 90%;
+        font-size: 1rem;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .how-to{
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .how-to{
+        width: 70%;
+        font-size: 1rem;
+    }
+}
+
 
 .key-word{
     animation-name: blink;
@@ -216,12 +254,31 @@ a:visited{
     animation-iteration-count: infinite;
 }
 
+@media screen and (max-width: 700px){
+    .general{
+        font-size: 1rem;
+    }
+}
+
 .general-data{
     animation-name: blink;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     color: var(--color-header);
+}
+
+.pokemon-name{
+    color: var(--theme-button-color);
+}
+
+/* POKEMON NAME (SUB TITLE)*/
+
+.pokemon-name-subtitle{
+    text-align: center;
+    background-color: white;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* IMAGES */
@@ -246,6 +303,8 @@ a:visited{
     border-bottom-color: var(--color-header);
     border-right-color: var(--color-header);
     border-radius: 50%;
+    text-align: center;
+    line-height: 300px;
 }
 
 .change-image-button{
@@ -287,6 +346,12 @@ a:visited{
     animation-name: float;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 700px){
+    .base-stats{
+        font-size: 1rem;
+    }
 }
 
 .stat-value{
@@ -341,4 +406,12 @@ a:visited{
 
 .dark-data{
     color: var(--color-header-2);
+}
+
+.dark-pokemon-name{
+    color: var(--Theme-button-color-2);
+}
+
+.dark-subtitle{
+    background-color: var(--dark-body);
 }

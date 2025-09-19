@@ -1,0 +1,1 @@
+https://pokeapi-connection-v2.netlify.app/base-stats

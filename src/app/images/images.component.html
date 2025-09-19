@@ -7,7 +7,7 @@
         <img [src]="frontPicture ? pokemon.sprites.front_default : pokemon.sprites.back_default" alt="image no available"
         class="pokemon-image" id="pokemon-image" appSectionTheme [darkTheme]="darkTheme">
     </ng-container>
-    <button class="change-image-button" id="change-image-button" (click)="changeImage()">
-        <img src="../../assets/arrow-left-right.svg" alt="" class="change-image-button-image">
+    <button class="rotation-button" id="change-image-button" (click)="changeImage()" appRotationButton [darkTheme]="darkTheme">
+        <img src="../../assets/arrow-clockwise.svg" alt="" class="change-image-button-image">
     </button>
 </div>

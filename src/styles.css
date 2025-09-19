@@ -154,6 +154,9 @@ a:visited{
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -326,13 +329,18 @@ a:visited{
     line-height: 300px;
 }
 
-.change-image-button{
+.rotation-button{
     width: 30px;
     height: 30px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    border: 1px solid var(--change-image-button-container);
+    /*border: 1px solid var(--change-image-button-container);*/
+    background-color: var(--color-header);
+}
+
+.rotation-button:hover{
+    filter: brightness(2);
 }
 
 .change-image-button-image{
@@ -439,4 +447,8 @@ a:visited{
 .dark-image-orientation{
     background-color: var(--color-header-2);
     color: var(--dark-body);
+}
+
+.dark-rotation-button{
+    background-color: var(--color-header-2);
 }

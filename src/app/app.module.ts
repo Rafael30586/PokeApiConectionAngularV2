@@ -24,6 +24,8 @@ import { TitleSectionDirective } from './directives/title-section.directive';
 import { PokemonNameDirective } from './directives/pokemon-name.directive';
 import { SubtitleDirective } from './directives/subtitle.directive';
 import { ImageOrientationDirective } from './directives/image-orientation.directive';
+import { RotationButtonDirective } from './directives/rotation-button.directive';
+import { IconThemeButtonDirective } from './directives/icon-theme-button.directive';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { ImageOrientationDirective } from './directives/image-orientation.direct
     TitleSectionDirective,
     PokemonNameDirective,
     SubtitleDirective,
-    ImageOrientationDirective
+    ImageOrientationDirective,
+    RotationButtonDirective,
+    IconThemeButtonDirective
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,9 @@
                 <input type="text" class="nav-form-input" formControlName="idOrName" appInputTheme [darkTheme]="darkTheme">
                 <button type="submit" class="submit-button" appSubmitButtonTheme [darkTheme]="darkTheme">Search</button>
             </form>
-            <button class="theme-button" (click)="changeTheme()" appThemeButtonTheme [darkTheme]="darkTheme"></button>
+            <button class="theme-button" (click)="changeTheme()" appThemeButtonTheme [darkTheme]="darkTheme">
+                <img src="../../assets/sun-fill.svg" alt="icon" appIconThemeButton [darkTheme]="darkTheme">
+            </button>
         </div>
     </nav>
 </header>

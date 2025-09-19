@@ -23,6 +23,7 @@ import { HowToComponent } from './how-to/how-to.component';
 import { TitleSectionDirective } from './directives/title-section.directive';
 import { PokemonNameDirective } from './directives/pokemon-name.directive';
 import { SubtitleDirective } from './directives/subtitle.directive';
+import { ImageOrientationDirective } from './directives/image-orientation.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SubtitleDirective } from './directives/subtitle.directive';
     HowToComponent,
     TitleSectionDirective,
     PokemonNameDirective,
-    SubtitleDirective
+    SubtitleDirective,
+    ImageOrientationDirective
   ],
   imports: [
     BrowserModule,

@@ -283,8 +283,14 @@ a:visited{
 
 /* IMAGES */
 
+.image-orientation-title{
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
 .image-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 10px;
     align-items: center;

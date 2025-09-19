@@ -1,6 +1,7 @@
 <h1 class="title-section" appTitleSection [darkTheme]="darkTheme">Images</h1>
 <h2 class="pokemon-name-subtitle pokemon-name" appPokemonName [darkTheme]="darkTheme" appSubtitle [darkTheme]="darkTheme">{{ (pokemonData$ | async)?.name | removeMiddleDash}}</h2>
 <div class="image-container" appBodyTheme [darkTheme]="darkTheme">
+    <h2 class="title-section image-orientation-title" appTitleSection [darkTheme]="darkTheme">{{frontPicture ? 'front' : 'back'}}</h2>
     <ng-container *ngIf="pokemonData$ | async as pokemon">
         <img [src]="frontPicture ? pokemon.sprites.front_default : pokemon.sprites.back_default" alt="image no available"
         class="pokemon-image" id="pokemon-image" appSectionTheme [darkTheme]="darkTheme">
